@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3EDDB"
+    tools:context=".MainActivity">
+
+
+
+
+    <TextView
+        android:id="@+id/topDescriptor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/config_descriptor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.101" />
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:digits="abcdefghijklmnopqrstuvwxyz1234567890 "
+        android:ems="10"
+        android:hint="@string/name_hint"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.691"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.174" />
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="continueConfig"
+        android:text="@string/config_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <TextView
+        android:id="@+id/configTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/config_title"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/nameLabelConfig"
+        android:layout_width="92dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="120dp"
+        android:minHeight="30dp"
+        android:text="Your name:"
+        app:layout_constraintEnd_toStartOf="@+id/nameInput"
+        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/difficultyLevelLabel"
+        android:layout_width="92dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="188dp"
+        android:minHeight="30dp"
+        android:text="Difficulty Level:"
+        app:layout_constraintEnd_toStartOf="@+id/nameInput"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bottomDescriptor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please choose a character from below:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448" />
+
+    <com.example.CrossTheRoad.RadioGroupGridLayout
+        android:id="@+id/spriteRadioGroup"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.693"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <TableRow>
+
+            <RadioButton
+                android:id="@+id/jesterSprite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableBottom="@mipmap/jestertrans"
+                android:onClick="onDifficultyBtnClicked"
+                android:text="Jester" />
+
+            <RadioButton
+                android:id="@+id/knightSprite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableBottom="@mipmap/knighttrans"
+                android:onClick="onDifficultyBtnClicked"
+                android:text="Knight" />
+
+            <RadioButton
+                android:id="@+id/kingSprite"
+                android:layout_width="111dp"
+                android:layout_height="wrap_content"
+                android:drawableBottom="@mipmap/kingtrans"
+                android:onClick="onDifficultyBtnClicked"
+                android:text="King" />
+
+        </TableRow>
+        <TableRow>
+
+            <RadioButton
+                android:id="@+id/princessSprite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableBottom="@mipmap/princesstrans"
+
+                android:onClick="onDifficultyBtnClicked"
+                android:text="Princess" />
+
+            <RadioButton
+                android:id="@+id/wizardSprite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableBottom="@mipmap/wizardtrans"
+                android:onClick="onDifficultyBtnClicked"
+                android:text="Wizard" />
+
+            <RadioButton
+                android:id="@+id/executionerSprite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableBottom="@mipmap/executionertrans"
+                android:onClick="onDifficultyBtnClicked"
+                android:text="Executioner" />
+        </TableRow>
+
+    </com.example.CrossTheRoad.RadioGroupGridLayout>
+
+    <Spinner
+        android:id="@+id/difficultySpinner"
+        android:layout_width="223dp"
+        android:layout_height="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.739"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.269" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

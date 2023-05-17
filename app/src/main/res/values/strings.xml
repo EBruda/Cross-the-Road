@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Cross the Castle</string>
+    <string name="title">Cross The Castle</string>
+    <string name="config_title">Welcome!</string>
+    <string name="config_descriptor">Please enter your name and choose a difficulty level</string>
+    <string name="name_hint">Enter your name here:</string>
+    <string name="config_button">Continue</string>
+    <string name="game_over">Game Over!</string>
+    <string name="win_msg">Congrats, you win!</string>
+    <string-array name="levelDropDown">Choose a difficulty level:>
+        <item>Easy</item>
+        <item>Intermediate</item>
+        <item>Average</item>
+        <item>Hard</item>
+        <item>Expert</item>
+    </string-array>
+
+</resources>
